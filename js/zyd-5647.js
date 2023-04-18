@@ -31,12 +31,15 @@
 //     })
 // })
 
-//Convertendo HTMLCollection em Array e forma indireta:
-const liElementHTML = document.getElementsByTagName("li");
-const liElementArray = [...liElementHTML];
+// //Convertendo HTMLCollection em Array e forma indireta:
+// const liElementHTML = document.getElementsByTagName("li");
+// const liElementArray = [...liElementHTML];
 
-liElementArray.map((item, key)=>{
-    if (item.textContent == "Item - 39"){
-        console.log(`${key+1} - ${item.textContent = "Localizado"}`);
-    }
-})
+// liElementArray.map((item, key)=>{
+//     if (item.textContent == "Item - 39"){
+//         console.log(`${key+1} - ${item.textContent = "Localizado"}`);
+//     }
+// })
+
+//////////////////////////////////////////////////////////////////////////////////
+
