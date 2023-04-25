@@ -43,21 +43,48 @@
 
 //////////////////////////////////////////////////////////////////////////////////
 
-function soma(p1, p2, p3) {
-    num1 = p1;
-    num2 = p2;
+// function soma(p1, p2, p3) {
+//     num1 = p1;
+//     num2 = p2;
     
-    return parseInt(num1) + parseInt(num2) + parseInt(p3);
+//     return parseInt(num1) + parseInt(num2) + parseInt(p3);
 
-    // console.log(`Resultado: ${parseInt(num1) + parseInt(num2) + parseInt(parametro)}`);
+//     // console.log(`Resultado: ${parseInt(num1) + parseInt(num2) + parseInt(parametro)}`);
 
-    // console.log(`Este é o parâmetro que foi passado para a função: ${parseInt(parametro)}`);
-}
+//     // console.log(`Este é o parâmetro que foi passado para a função: ${parseInt(parametro)}`);
+// }
 
-//Arrow Function:
-const mudaCor = ()=>{
-    //Função Set-Time-Out:
-    setTimeout(soma(), 5000);
+// //Arrow Function:
+// const mudaCor = ()=>{
+//     //Função Set-Time-Out:
+//     setTimeout(soma(), 5000);
+// }
+
+// mudaCor();
+
+let tmp = ""
+
+function mudaCor() {
+    let r = "";
+    let g = "";
+    let b = "";
+
+    //random = Gera números aleatórios entre 0 e 1
+    //ceil, floor e round que arredondam o número para cima, para baixo ou aleatoriamente
+
+    //Determinando para a variável r um valor entre 0 e 255:
+    r = Math.round(Math.random() * 255);
+    console.log(r);
+    g = Math.round(Math.random() * 255);
+    console.log(r);
+    b = Math.round(Math.random() * 255);
+    console.log(r);
+
+    const cabecalho = document.querySelector(".cabecalho");
+    
+    cabecalho.setAttribute("style", `background-color: rgb(${r}, ${g}, ${b})`);
+
+    tmp = setTimeout(mudaCor, 1000);
 }
 
 mudaCor();
